@@ -281,7 +281,7 @@ class EXPORT_TESTER_OT_export_tester(Operator):
         # Which formats to export based on settings
         # If you want to limit export to fewer formats, comments this and set your own formats
         # Notice that stl has no material export options
-        formats = ["obj", "fbx", "glb", "gltf", "stl"]
+        formats = ["obj", "fbx", "glb", "gltf"] + (["stl"] if self.export_enum == "MODELS" else [])
         # formats = ["your", "formats"]
 
         # set selected export options
